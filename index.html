@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+<style>
+    
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+.month {
+  padding: 30px 25px;
+  width: 100%;
+  background: #c0a479;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #665844;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #ffffff;
+  text-align: center;
+}
+
+.days {
+  padding: 20px 0;
+  background: #c0a479;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:20px;
+  color: #412c11;
+  font-style: bold;
+}
+
+.days li .active {
+  padding: 10px;
+  background: #1abc9c;
+  color: white !important
+  
+}
+
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {width: 12.2%;}
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #1abc9c;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+    <div class="topnav">
+        <a class="active" href="#home"> <i style="font-size:18px" class="fa">&#xf029;</i> QRganize</a>
+      </div>
+
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
+<ul class="days">  
+  <li>25</li>
+  <li>26</li>
+  <li>27</li>
+  <li><span class="active">28</li>
+  <li>29</li>
+  <li>30</li>
+  <li>31</li>
+</ul>
+<style>
+    .accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+    
+    .active, .accordion:hover {
+      background-color: #ccc; 
+    }
+    
+    .panel {
+      padding: 0 18px;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+    }
+    </style>
+    </head>
+    <body>
+        <div class="topnav">
+            <a class="active"> December 28th</a>
+        </div>
+    <button class="accordion" style="color:red; font-style: italic;">Activity Deadline</button>
+    <div class="panel">
+        <p></p>
+      <p >Online Activity no. 5 on CCL-18</p>
+      <p></p>
+      <p></p>
+    </div>
+    
+    <button class="accordion">Practice - 11:00 AM</button>
+    <div class="panel">
+      <p></p>
+    </div>
+    
+    <button class="accordion">Driving Session - 3:00 PM</button>
+    <div class="panel">
+      <p></p>
+    </div>
+    
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    </script>
+<div class="month">
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>    
+    <ul>
+      <li class="prev">&#10094;</li>
+      <li class="next">&#10095;</li>
+      <li>
+        December
+        <span style="font-size:40px">2024</span>
+      </li>
+    </ul>
+  </div>
+  
+  <style>
+    .dot {
+      height: 25px;
+      width: 25px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    </style>
+    </head>
+    <body>
+
+</body>
+</html>
